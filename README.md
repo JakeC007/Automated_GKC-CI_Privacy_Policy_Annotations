@@ -1,12 +1,32 @@
 # GKC – CI Automated Parameter Annotation Tool
 
-**Draft Repository** – *Please do not distribute.*
-
 ## Overview
 
-This repository is the companion artifact to the paper *Automating Governing Knowledge Commons and Contextual Integrity (GKC-CI)  Privacy Policy Annotations with Large Language Models.*
+This repository is the companion artifact to the paper *Automating Governing Knowledge Commons and Contextual Integrity (GKC-CI)  Privacy Policy Annotations with Large Language Models* which will appear in PETS 2025.
 
 This repository provides tools for automating parameter annotation using OpenAI’s API. It is designed to parse policy text files and output a summary in `.csv` format along with detailed logs. Please follow the setup and usage instructions below to get started.
+
+
+
+**N.B.:** If you are looking for the 456 annotated privacy polices please see the [Privacy Policy Annotations](https://github.com/JakeC007/Automated_GKC-CI_Privacy_Policy_Annotations/releases/tag/data) release.
+
+## DIR Overview
+```bash
++---create_model # contains code needed to create the finetune model
+|   \---data
+|           
++---policy_text # holds policy texts 
+|   +---corpus # where dbOperations.py's processed policy text files are saved
+|   +---processed # where text_parse.py's processed policy text files are saved    
+|   \---raw # save raw policy text files here and then run text_parse.py
+|           
++---pull_policy_from_corpus # contains code to extract processed policy text files from Princeton-Leuven Longitudinal Corpus
+|       
++---results # where output from the LLM is saved
+\---visualizer # contains code and data to run the visualizer
+    +---viz_annotation # store annotation files here (LLM output)  
+    \---viz_text # store processed text files here (pull from policy_text subdirs)
+```
 
 ## Setup
 
@@ -137,6 +157,8 @@ To analyze how parameters change at scale and over time, use the summary file ou
 
 If you use this repository in your work, please cite our project:
 
+The PETS citation (preferred) is forthcoming; for now please use the ArXiv citation.
+
 **Bibtex Citation:**
 ```bibtex
 @misc{chanenson2024automatinggoverningknowledgecommons,
@@ -170,20 +192,3 @@ If you use this repository in your work, please cite our project:
       echo "alias openai=~/.local/bin/openai" >> ~/.bashrc
       ```
 
-## DIR Overview
-```bash
-+---create_model # contains code needed to create the finetune model
-|   \---data
-|           
-+---policy_text # holds policy texts 
-|   +---corpus # where dbOperations.py's processed policy text files are saved
-|   +---processed # where text_parse.py's processed policy text files are saved    
-|   \---raw # save raw policy text files here and then run text_parse.py
-|           
-+---pull_policy_from_corpus # contains code to extract processed policy text files from Princeton-Leuven Longitudinal Corpus
-|       
-+---results # where output from the LLM is saved
-\---visualizer # contains code and data to run the visualizer
-    +---viz_annotation # store annotation files here (LLM output)  
-    \---viz_text # store processed text files here (pull from policy_text subdirs)
-```
