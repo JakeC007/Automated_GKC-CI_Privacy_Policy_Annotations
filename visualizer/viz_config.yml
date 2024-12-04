@@ -1,0 +1,8 @@
+mode: multiple  # Set to "single" for one visualization or "multiple" for two visualizations
+
+# Specify visualization file paths
+visualizations:
+  - text_file: "visualizer/viz_text/adobe2011-B.txt"
+    annotation_file: "visualizer/viz_annotation/adobe_com-2011-B_results"
+  - text_file: "visualizer/viz_text/dropbox_com-2013-B.txt"
+    annotation_file: "visualizer/viz_annotation/dropbox_com-2013-B_results"

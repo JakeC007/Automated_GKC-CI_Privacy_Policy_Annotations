@@ -1,0 +1,28 @@
+# production.yml configures both `production.py` and `text_parse.py`
+
+
+# Specify the model you want to run. This should be the full model identifier.
+# Update this to your model name that you got in ft_turbo.ipynb
+MODEL_NAME: "ft:gpt-3.5-turbo-0613:apthorpe-lab:loren-ipsum" #EDIT ME
+
+# Name of the summary file to store results of LLM.
+SUMMARY_FILE_NAME: "summary.csv"
+
+# Flip the following to true if you used the `dbOperations.py` file to generate your text data
+PLC_DBO: False
+
+#################################################
+## You Should Not Need To Modify The Following ##
+#################################################
+
+# Directory path for output files such as logs, CSVs, and summary files of LLM.
+OUTPUT_DIR: "results"
+
+# Directory path for input files for the text_parse script.
+raw_text_dir: "policy_text/raw" 
+
+# Directory path for the output of the text_parse script (CSV files).
+processed_text_dir: "policy_text/processed"
+
+# Directory path for the output of the dbOperations script (CSV files).
+corpus_text_dir: "policy_text/corpus"

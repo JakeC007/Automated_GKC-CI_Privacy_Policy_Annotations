@@ -1,0 +1,16 @@
+# You may change the input list to be any websites that are in the corpus
+input_list:
+  - google.com
+  - facebook.com
+  - yahoo.com
+  - eff.org
+  - bankofamerica.com
+  - github.com
+  - youtube.com
+  - nytimes.com
+  - buzzfeed.com
+  - nsf.gov
+  - geico.com
+
+# Absolute path to the database 
+RELEASE_DB_NAME: /path/to/release_db.sqlite
