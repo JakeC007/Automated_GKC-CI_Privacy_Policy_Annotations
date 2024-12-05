@@ -115,7 +115,7 @@ def select_files(directory, verbose = False, completed_file_path = False):
     
     # Get the list of filenames from the directory
     filenames = sorted(os.listdir(directory))
-    
+
     # Use a nested dictionary to keep track: organization -> year -> filename
     selected_files = {}
 
@@ -162,7 +162,9 @@ def select_files(directory, verbose = False, completed_file_path = False):
 
         # Remove items from full_file_paths that already exist in the "Filename" column
         filtered_paths = [path for path, name in zip(full_file_paths, file_names) if name not in completed]
-
+        
+        print(f"Processing the following files: {filtered_paths}\nAll other files in '{directory}' are already logged in the summary file ({completed_file_path}).")
+        
         return filtered_paths
 
 
