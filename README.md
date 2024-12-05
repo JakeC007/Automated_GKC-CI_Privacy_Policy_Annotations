@@ -63,7 +63,7 @@ Note if you have `~/.bashrc` instead of `~/.bash_profile`. Just swap out `~/.bas
    - Run the model via `benchmark\benchmark_model.py`. 
    - The `.csv` file produced from the script can be used to calculate accuracy. 
 
-## Usage -- Bring Your Own Policy Files
+## Usage – Bring Your Own Policy Files
 
 1. **Prepare Policy Text Files**  
    Place your policy text files in the `policy_text/raw` directory.
