@@ -122,12 +122,6 @@ def createNewSubdir():
     Returns:
     - str: Path to the new (or existing) subdirectory named after today's date.
 
-    Example:
-    path = createNewSubdir()
-    print(path)  # Outputs: /CI-Annotation-GPT/production_data/2023-08-13 (or whichever today's date is)
-
-    Note:
-    The subdirectory is created in the 'production_data' directory which is one directory up from the script's directory.
     """
     
     # Get today's date and format it as YYYY-MM-DD
@@ -417,8 +411,12 @@ def convertText(df, getCost=False):
         fileName = f"{domainName}-{year}-{phase}.csv"
 
         # Create file path
-        newSubdir = createNewSubdir()
-        csvFilePath = os.path.join(newSubdir, fileName)
+        csvFilePath = os.path.join("policy_text\corpus", fileName)
+        
+        ## Uncomment if you want dated folders for each run
+        # newSubdir = createNewSubdir()
+        # csvFilePath = os.path.join(newSubdir, fileName)
+
         
         # Convert the list to a DataFrame and rename the column
         annotatedDf = pd.DataFrame(annotatedList, columns=['prompt'])
