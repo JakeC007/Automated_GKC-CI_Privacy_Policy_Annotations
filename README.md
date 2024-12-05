@@ -29,7 +29,7 @@ This repository provides tools for automating parameter annotation using OpenAIâ
     \---viz_text # store processed text files here (pull from policy_text subdirs)
 ```
 
-## Setup
+## Enviroment Setup
 
 1. **Install Dependencies**  
    - Run the following command to install the required Python packages: `pip install -r requirements.txt` 
