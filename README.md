@@ -12,7 +12,8 @@ This repository provides tools for automating parameter annotation using OpenAI�
 
 ## DIR Overview
 ```bash
-+---create_model # contains code needed to create the finetune model
++---benchmark # contains code needed to benchmark the finetuned model
++---create_model # contains code needed to create the finetuned model
 |   \---data
 |           
 +---policy_text # holds policy texts 
@@ -57,6 +58,11 @@ Note if you have `~/.bashrc` instead of `~/.bash_profile`. Just swap out `~/.bas
 2. **Update the Model Configuration**  
    Open `prod.yml` and update the `MODEL_NAME` field with your generated model ID.
 
+3. **(Optional) Benchmark Your New Model**
+   - Open `benchmark\benchmark_config.yaml` and update the `MODEL_NAME` field with your generated model ID. 
+   - Run the model via `benchmark\benchmark_model.py`. 
+   - The `.csv` file produced from the script can be used to calculate accuracy. 
+
 ## Usage -- Bring Your Own Policy Files
 
 1. **Prepare Policy Text Files**  
@@ -70,7 +76,7 @@ Note if you have `~/.bashrc` instead of `~/.bash_profile`. Just swap out `~/.bas
 
    - This will generate a `.csv` file with parameter counts and a detailed log file for each policy processed.
 
-### Usage – Pull Privacy Policies From the Princeton-Leuven Longitudinal Corpus of Privacy Policies
+## Usage – Pull Privacy Policies From the Princeton-Leuven Longitudinal Corpus of Privacy Policies
 
 > **Note**: If you plan to use the [Princeton-Leuven Longitudinal Corpus of Privacy Policies](https://privacypolicies.cs.princeton.edu/), you’ll need to set up additional configurations and download the [dataset in SQLite format](https://privacypolicies.cs.princeton.edu/data).
 
@@ -114,7 +120,7 @@ After filtering the data, you’ll have options on how to proceed:
 - **Export df with Policy Texts**: Exports the current `df` with the included policy texts.
 - **Export Policy Texts for Visualization**: Outputs policy texts for external visualization or analysis.
 
-## Output
+## `production.py` Output
 
 - **CSV File**: Provides a summary of parameter counts for each policy.
 - **Log File**: Contains detailed, line-by-line output for each parsed policy.
@@ -150,7 +156,7 @@ This helps provide context to the visualizations by linking the highlighted text
 
 ## Parameter Analysis at Scale 
 
-To analyze how parameters change at scale and over time, use the summary file output by `production.py` as the basis for creating figures or graphs. The `analysis` folder in the data release contains sample scripts used to generate the figures in Section 7. However, creating the figures/graphs based on *user generated* summary files is the user's responsibility.
+To analyze how parameters change at scale and over time, use the summary file output by `production.py` as the basis for creating figures or graphs. The `analysis` folder in the [data release](https://github.com/JakeC007/Automated_GKC-CI_Privacy_Policy_Annotations/releases/tag/data) contains sample scripts used to generate the figures in Section 7. However, creating the figures/graphs based on *user generated* summary files is the user's responsibility.
 
 
 ## Citation
@@ -178,17 +184,24 @@ The PETS citation (preferred) is forthcoming; for now please use the ArXiv citat
 
 - **Command Not Found Error**  
    If you encounter an error stating that the `openai` command was not found:
-   
-   1. Verify the installation:
+
+   1. Verify that `~/.local/bin/` is in your `$PATH`:
+      ```bash
+      echo $PATH | grep -q "~/.local/bin" || echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
+      ```
+      This ensures `~/.local/bin/` is added to your `$PATH` if it isn't already, and reloads your shell configuration.
+
+   2. Verify the installation:
       ```bash
       pip3 show openai
       ```
-   2. If installed, create an alias to ensure the `openai` command is accessible:
+   
+   3. If installed, ensure the `openai` command is accessible:
       ```bash
       alias openai=~/.local/bin/openai
       ```
-   3. To make this change permanent, add the alias to your `~/.bashrc` file:
+   
+   4. To make this change permanent, add the alias to your `~/.bashrc` file:
       ```bash
       echo "alias openai=~/.local/bin/openai" >> ~/.bashrc
       ```
-

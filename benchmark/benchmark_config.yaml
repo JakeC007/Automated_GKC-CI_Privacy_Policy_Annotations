@@ -1,0 +1,9 @@
+# Specify the model you want to benchmark. This should be the full model identifier.
+# Update this to your model name that you got in ft_turbo.ipynb
+MODEL_NAME: "ft:gpt-3.5-turbo-0613:apthorpe-lab:loren-ipsum" #EDIT ME
+
+OUTPUT_DIR: "benchmark/bench_results" #where you want the log and stat files to go
+
+# Option To Run A Subset Of The Benchmark
+RUN_SUBSET: False  # make false if you want to benchmark on the full testing file
+N_EXAMPLES: 10  # define how many examples you want to run in the subset
