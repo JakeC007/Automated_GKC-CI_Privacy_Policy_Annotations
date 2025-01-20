@@ -107,6 +107,9 @@ This should consume a negligible amount of space on disk and run on OpenAI's ser
 This supports our claim that we provide the code needed for users to fine-tune their own model at home.
 ##### How to execute the experiment in detailed steps:
 
+Note: in order to run Experiment 1, you need an API key as outlined in step 4 of[Environment Setup](#set-up-the-environment-only-for-functional-and-reproduced-badges).
+
+
 1. **Open the fine-tuning notebook**:
    ```bash
    jupyter notebook ft_turbo.ipynb
