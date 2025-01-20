@@ -234,7 +234,15 @@ The following will:
 
 #### Experiment 6: Replicating the Section 7 Graphs
 ##### Expected result:
-Graphs like those in Section 7.
+Graphs like those in Section 7. See the table below for a mapping between fig number and filename.
+
+| Figure Number | File Name                                  |
+|---------------|--------------------------------------------|
+| Fig 6         | variance.png                              |
+| Fig 7         | paramdensity.png                          |
+| Fig 8         | popularity-param-count.png                |
+|               | popularity-param-ratio.png                |
+
 
 ##### How long it takes and how much space it consumes on disk (approximately)
 It will take less than a minute for each script to run.
