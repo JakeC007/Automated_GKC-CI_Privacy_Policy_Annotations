@@ -242,7 +242,7 @@ Graphs like those in Section 7. See the table below for a mapping between fig nu
 | Fig 7         | paramdensity.png                          |
 | Fig 8         | popularity-param-count.png & popularity-param-ratio.png               |
 
-Note: We include the longitudinal-figures.py script, featured in Appendix I, Fig 17, in our repo because it provides useful graphing and visualization functionality for other researchers using the tool. This is an added bonus and does not need to be tested, as it is not part of Experiment Six nor a core claim of the paper.
+Note: We include the `longitudinal-figures.py script`, featured in Appendix I, Fig 17, in our repo because it provides useful graphing and visualization functionality for other researchers using the tool. This is an added bonus and does not need to be tested, as it is not part of Experiment 6 nor a core claim of the paper.
 
 ##### How long it takes and how much space it consumes on disk (approximately)
 It will take less than a minute for each script to run.
