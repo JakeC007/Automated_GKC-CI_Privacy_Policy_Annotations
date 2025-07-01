@@ -163,20 +163,25 @@ To analyze how parameters change at scale and over time, use the summary file ou
 
 If you use this repository in your work, please cite our project:
 
-The PETS citation (preferred) is forthcoming; for now please use the ArXiv citation.
+The PETS citation (preferred) is below.
 
 **Bibtex Citation:**
+
 ```bibtex
-@misc{chanenson2024automatinggoverningknowledgecommons,
-      title={Automating Governing Knowledge Commons and Contextual Integrity (GKC-CI) Privacy Policy Annotations with Large Language Models}, 
-      author={Jake Chanenson and Madison Pickering and Noah Apthorpe},
-      year={2024},
-      eprint={2311.02192},
-      archivePrefix={arXiv},
-      primaryClass={cs.CY},
-      url={https://arxiv.org/abs/2311.02192}, 
+@article{chanenson2025,
+  title = {Automating {{Governing Knowledge Commons}} and {{Contextual Integrity}} ({{GKC-CI}}) {{Privacy Policy Annotations}} with {{Large Language Models}}},
+  author = {Chanenson, Jake and Pickering, Madison and Apthrope, Noah},
+  year = {2025},
+  journal = {Proceedings on Privacy Enhancing Technologies},
+  issn = {2299-0984},
+  urldate = {2025-04-29},
+  note = {\url{https://petsymposium.org/popets/2025/popets-2025-0062.php}}
 }
 ```
+
+**IEEE Formatted Citation** 
+
+> J. Chanenson, M. Pickering, and N. Apthrope, “Automating Governing Knowledge Commons and Contextual Integrity (GKC-CI) Privacy Policy Annotations with Large Language Models,” *Proceedings on Privacy Enhancing Technologies*, 2025, Accessed: Apr. 28, 2025. [Online]. Available: https://petsymposium.org/popets/2025/popets-2025-0062.php
 
 ## Troubleshooting
 
